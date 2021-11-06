@@ -1,0 +1,5 @@
+
+[network_loadbalancer_group]
+
+CPN01-CHN-LB01 ansible_host=10.0.254.120
+CPN01-CHN-LB02 ansible_host=10.0.254.220
