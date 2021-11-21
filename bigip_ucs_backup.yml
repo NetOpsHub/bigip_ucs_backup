@@ -23,7 +23,6 @@
           validate_certs: no
         src: "{{inventory_hostname}}_{{'%Y%m%d_%H%M%S' | strftime}}.ucs"
         dest: files/{{'%Y%m%d' | strftime}}/{{inventory_hostname}}_{{'%Y%m%d_%H%M%S' | strftime}}.ucs
-      when: (inventory_hostname is in(groups.network_loadbalancer_group))
       delegate_to: localhost
       tags:
         - bigip_ucs_backup
